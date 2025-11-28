@@ -1,0 +1,58 @@
+.background-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.blur-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(96px);
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.blur-orb-1 {
+  top: 25%;
+  left: -25%;
+  height: 16rem;
+  width: 16rem;
+  background-color: rgba(168, 85, 247, 0.3); /* purple-500/30 */
+}
+
+.blur-orb-2 {
+  right: -25%;
+  bottom: 25%;
+  height: 16rem;
+  width: 16rem;
+  background-color: rgba(59, 130, 246, 0.3); /* blue-500/30 */
+  animation-delay: 1s;
+}
+
+.blur-orb-3 {
+  top: 50%;
+  left: 50%;
+  height: 16rem;
+  width: 16rem;
+  background-color: rgba(236, 72, 153, 0.2); /* pink-500/20 */
+  transform: translate(-50%, -50%);
+  animation-delay: 0.5s;
+}
+
+/* Responsive untuk layar lebih besar (sm: 640px) */
+@media (min-width: 640px) {
+  .blur-orb-1,
+  .blur-orb-2,
+  .blur-orb-3 {
+    height: 24rem;
+    width: 24rem;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
